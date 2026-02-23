@@ -1,6 +1,65 @@
-#  Common Source Amplifier using NMOS (TSMC 180nm) – LTspice
+#  # Experiment-1-4NI24ec084-CS-Amplifier
+Common sourse Amplifier using NMOS(TSMC180nm)LT-spice
 
-##  Aim
+## DC, AC and Transient Analysis of Common Source Amplifier
+
+A common-source amplifier is a type of amplifier where the input signal is applied to the **gate**, and the output is taken from the **drain**. The source terminal is typically grounded.  
+
+It provides:
+- High voltage gain  
+- 180° phase shift (signal inversion) between input and output  
+
+This amplifier is widely used for amplifying weak analog signals. The voltage gain mainly depends on the **load resistor** and the **transconductance (gm)** of the MOSFET.
+
+---
+
+## Key Components and Their Roles
+
+### 1. Rd (Drain Resistor)
+- Provides the required voltage drop for amplification  
+- Converts drain current variations into output voltage  
+- Directly affects voltage gain  
+
+---
+
+### 2. W (Transistor Width)
+- Determines the transconductance (gm) of the MOSFET  
+- Larger width → Higher gm → Higher gain  
+- Also affects bandwidth and current consumption  
+
+---
+
+### 3. Vdd (Drain Supply Voltage)
+- Provides DC biasing for the NMOS transistor  
+- Ensures the MOSFET operates in the saturation region  
+- Affects output swing and operating point  
+
+---
+
+### 4. AC Input (SINE Source)
+- Small signal applied at the gate  
+- Used to analyze amplifier response  
+- Helps perform AC and transient analysis  
+
+---
+
+## Analyses Performed
+
+### 1. DC Analysis
+- Determines operating point (bias point)  
+- Ensures MOSFET operates in saturation region  
+
+### 2. AC Analysis
+- Determines voltage gain and frequency response  
+- Helps evaluate bandwidth  
+
+### 3. Transient Analysis
+- Observes time-domain waveform behavior  
+- Confirms phase inversion and amplification  
+
+---
+
+##  Aim:
 To design and simulate a Common Source (CS) Amplifier using NMOS in TSMC 180nm technology using LTspice and evaluate:
 - Operating point
 - Voltage gain (transient + theoretical)
