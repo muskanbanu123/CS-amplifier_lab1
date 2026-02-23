@@ -43,30 +43,87 @@ ID ≤ 0.4m / 1.2 = 0.3 mA
 
 ---
 
-### 2️⃣ Process Parameters
-μn = 273.8 × 10⁻⁴ m²/Vs  
-ε0 = 8.854 × 10⁻¹² F/m  
-εr = 3.9  
-tox = 4.1 × 10⁻⁹ m  
+---
+## 📐 MOSFET Width Calculation
+
+To ensure the MOSFET operates in saturation while satisfying the power constraint, the device width (W) is calculated using the saturation current equation.
 
 ---
 
-### 3️⃣ Width Calculation
-From saturation current equation:
-W ≈ 3.3 µm  
+### Saturation Drain Current Equation
+ID = (1/2) Kn (VGS − VT)²  
 
-Selected:
-W = 4 µm (for better bias stability)
+Where:  
+Kn = μn Cox (W / L)
+
+---
+
+### Step 1 — Maximum Drain Current
+Given power constraint:
+P ≤ 0.4 mW  
+
+ID ≤ P / VDD  
+ID ≤ 0.4mW / 1.2V  
+ID ≤ 0.3 mA
+
+---
+
+### Step 2 — Process Parameters (TSMC 180nm)
+- Electron mobility (μn) = 273.8 × 10⁻⁴ m²/Vs  
+- Oxide permittivity:
+  εox = ε0 × εr  
+  ε0 = 8.854 × 10⁻¹² F/m  
+  εr = 3.9  
+- Oxide thickness:
+  tox = 4.1 × 10⁻⁹ m  
+
+Cox = εox / tox
+
+---
+
+### Step 3 — Kn Expression
+Kn = μn Cox (W / L)
+
+Rearranging for W:
+W = (2 ID L) / (μn Cox (Vov)²)
+
+Where:
+Vov = (VGS − VT) → Overdrive voltage
+
+---
+
+### Step 4 — Substituting Values
+Using:
+- ID ≈ 0.25–0.3 mA  
+- L = 360 nm  
+- Estimated Vov ≈ 0.2 V  
+
+The calculated width:
+W ≈ 3.3 µm
+
+---
+
+### Final Selected Value
+For better bias stability and midpoint operation:
+
+W = 4 µm
+
+---
+
+### 📌 Reason for Choosing Larger Width
+- Improves bias robustness  
+- Ensures saturation across variations  
+- Helps achieve Vout ≈ VDD/2
 
 ---
 
 ### 4️⃣ Drain Resistor
 RD = (VDD − VDS) / ID  
-RD = (1.2 − 0.6) / 0.3mA = 2 kΩ
-
+RD = (1.2 − 0.6) / 0.3mA =
 ---
 
-## 🧪 Simulation Results
+## 🧪 Simulation Results 2 kΩ
+
 
 ### 📍 DC Operating Point
 
