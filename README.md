@@ -119,10 +119,9 @@ W = 4 µm
 
 ### 4️⃣ Drain Resistor
 RD = (VDD − VDS) / ID  
-RD = (1.2 − 0.6) / 0.3mA =
+RD = (1.2 − 0.6) / 0.3mA = 2kΩ
 ---
 
-## 🧪 Simulation Results 2 kΩ
 
 
 ### 📍 DC Operating Point
