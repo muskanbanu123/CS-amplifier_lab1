@@ -1,6 +1,6 @@
-# 📘 Common Source Amplifier using NMOS (TSMC 180nm) – LTspice
+#  Common Source Amplifier using NMOS (TSMC 180nm) – LTspice
 
-## 🔬 Aim
+##  Aim
 To design and simulate a Common Source (CS) Amplifier using NMOS in TSMC 180nm technology using LTspice and evaluate:
 - Operating point
 - Voltage gain (transient + theoretical)
@@ -10,7 +10,7 @@ To design and simulate a Common Source (CS) Amplifier using NMOS in TSMC 180nm t
 
 ---
 
-## ⚙️ Design Specifications
+##  Design Specifications
 
 | Parameter | Value |
 |----------|------|
@@ -23,7 +23,7 @@ To design and simulate a Common Source (CS) Amplifier using NMOS in TSMC 180nm t
 
 ---
 
-## 🧠 Theory
+##  Theory
 A Common Source amplifier provides high voltage gain with phase inversion.
 
 ### Drain Current (Saturation)
@@ -32,7 +32,7 @@ Kn = μn Cox (W/L)
 
 ---
 
-## 🧮 Design Calculations
+## Design Calculations
 
 ### 1️⃣ Operating Point
 Vout = VDD / 2 = 0.6 V  
@@ -44,7 +44,7 @@ ID ≤ 0.4m / 1.2 = 0.3 mA
 ---
 
 ---
-## 📐 MOSFET Width Calculation
+##  MOSFET Width Calculation
 
 To ensure the MOSFET operates in saturation while satisfying the power constraint, the device width (W) is calculated using the saturation current equation.
 
@@ -110,21 +110,21 @@ W = 4 µm
 
 ---
 
-### 📌 Reason for Choosing Larger Width
+### * Reason for Choosing Larger Width
 - Improves bias robustness  
 - Ensures saturation across variations  
 - Helps achieve Vout ≈ VDD/2
 
 ---
 
-### 4️⃣ Drain Resistor
+### *Drain Resistor
 RD = (VDD − VDS) / ID  
 RD = (1.2 − 0.6) / 0.3mA = 2kΩ
 ---
 
 
 
-### 📍 DC Operating Point
+###  DC Operating Point
 
 | W (µm) | ID | Vout |
 |-------|----|------|
@@ -136,7 +136,7 @@ Chosen: W = 4 µm
 
 ---
 
-## 📈 Transient Analysis
+##  Transient Analysis
 
 ### Input
 Vin(LP) = 890.36 mV  
@@ -154,7 +154,7 @@ Av(dB) = 20log(2.208) = 6.87 dB
 
 ---
 
-## 📘 Theoretical Gain
+##  Theoretical Gain
 Av = gm RD  
 
 gm = 2ID / Vov ≈ 2.1 mS  
@@ -167,7 +167,7 @@ Av ≈ 4.21 → 12.48 dB
 
 ---
 
-# 📊 AC Analysis
+#  AC Analysis
 
 The frequency response of the Common Source amplifier was analyzed for two loading conditions:
 1. 1 fF capacitor (parasitic case)
@@ -175,7 +175,7 @@ The frequency response of the Common Source amplifier was analyzed for two loadi
 
 ---
 
-## 🧪 Case 1 — With 1 fF Capacitor (Parasitic Case)
+##  Case 1 — With 1 fF Capacitor (Parasitic Case)
 
 Represents near-ideal unloaded output.
 
@@ -194,11 +194,11 @@ GBP ≈ 1.97 GHz
 ### Unity Gain Bandwidth
 UGB ≈ 1.97 GHz  
 
-📌 Very high bandwidth due to negligible capacitive loading.
+ Very high bandwidth due to negligible capacitive loading.
 
 ---
 
-## 🧪 Case 2 — With 0.5 pF Load Capacitor
+##  Case 2 — With 0.5 pF Load Capacitor
 
 Represents realistic output loading.
 
@@ -217,11 +217,11 @@ GBP ≈ 378 MHz
 ### Unity Gain Bandwidth
 UGB ≈ 0.378 GHz  
 
-📉 Bandwidth reduced due to increased capacitive loading.
+ Bandwidth reduced due to increased capacitive loading.
 
 ---
 
-## 📊 Comparison
+##  Comparison
 
 | Parameter | 1 fF | 0.5 pF |
 |----------|------|--------|
@@ -232,14 +232,14 @@ UGB ≈ 0.378 GHz
 
 ---
 
-## 📌 Observation
+##  Observation
 Bandwidth is inversely proportional to load capacitance.  
 Gain-Bandwidth Product remains approximately constant for a single-pole amplifier.
 
 
 
 
-## ✅ Conclusion
+##  Conclusion
 A Common Source Amplifier was successfully designed using TSMC 180nm NMOS under power constraints.
 
 Key Results:
@@ -248,7 +248,7 @@ Key Results:
 - GBP ≈ 378 MHz  
 - UGB ≈ 0.378 GHz  
 
-## 🔍 Overall Inference
+## Inference
 
 The Common Source amplifier designed using TSMC 180nm NMOS successfully met the given constraints of low supply voltage (1.2V) and limited power (≤ 0.4 mW). Biasing the circuit at VDD/2 ensured maximum symmetrical output swing and stable operation in saturation.
 
@@ -267,6 +267,6 @@ Overall, the experiment demonstrates key analog CMOS design principles:
 This experiment provides a clear understanding of real-world analog design challenges and validates theoretical concepts through LTspice simulation.
 ---
 
-## 🛠 Tools Used
+##  Tools Used
 - LTspice
 - TSMC 180nm Model Library
