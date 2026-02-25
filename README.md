@@ -1,4 +1,4 @@
-#  # Experiment-1-4NI24ec084-CS-Amplifier
+#  # Experiment-1-4NI24EC084-CS-Amplifier
 Common sourse Amplifier using NMOS(TSMC180nm)LT-spice
 
 ## DC, AC and Transient Analysis of Common Source Amplifier
