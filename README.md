@@ -71,6 +71,21 @@ To design and simulate a Common Source (CS) Amplifier using NMOS in TSMC 180nm t
 - Unity Gain Bandwidth (UGB)
 
 ---
+### Simulation Steps
+
+1. Create the schematic in LTspice using NMOS transistor, drain resistor, supply voltage, input source, and ground in common source configuration.
+
+2. Include the TSMC 0.18µm technology library and set the NMOS dimensions appropriately.
+
+3. Perform operating point analysis to obtain DC parameters such as drain current, VGS, and VDS.
+
+4. Run DC sweep analysis by varying the input voltage to observe the transfer characteristics.
+
+5. Perform transient analysis using a sinusoidal input to observe amplification and phase inversion and calculate voltage gain.
+
+6. Conduct AC analysis to study frequency response, gain, and bandwidth.
+
+7. Repeat AC analysis after adding a capacitor and compare the results.
 
 ##  Design Specifications
 
