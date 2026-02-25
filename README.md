@@ -4,7 +4,7 @@ Common sourse Amplifier using NMOS(TSMC180nm)LT-spice
 ## DC, AC and Transient Analysis of Common Source Amplifier
 ## Circuit Diagram
 
-![CS Amplifier Circuit](01.png)
+![CS Amplifier Circuit](08.png)
 
 A common-source amplifier is a type of amplifier where the input signal is applied to the **gate**, and the output is taken from the **drain**. The source terminal is typically grounded.  
 
@@ -282,6 +282,9 @@ The frequency response of the Common Source amplifier was analyzed for two loadi
 ---
 
 ##  Case 1 — With 1 fF Capacitor (Parasitic Case)
+![CS Amplifier Circuit](06.png)
+![CS Amplifier Circuit](07.png)
+
 
 Represents near-ideal unloaded output.
 
@@ -305,6 +308,9 @@ UGB ≈ 1.97 GHz
 ---
 
 ##  Case 2 — With 0.5 pF Load Capacitor
+![CS Amplifier Circuit](08.png)
+![CS Amplifier Circuit](09.png)
+
 
 Represents realistic output loading.
 
