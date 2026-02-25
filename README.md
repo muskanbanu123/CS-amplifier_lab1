@@ -187,6 +187,7 @@ RD = (1.2 − 0.6) / 0.3mA = 2kΩ
 
 
 ###  DC Operating Point
+![CS Amplifier Circuit](03.png)
 
 | W (µm) | ID | Vout |
 |-------|----|------|
@@ -239,6 +240,7 @@ The DC sweep confirms:
 ---
 
 ##  Transient Analysis
+![CS Amplifier Circuit](04.png)
 
 ### Input
 Vin(LP) = 890.36 mV  
