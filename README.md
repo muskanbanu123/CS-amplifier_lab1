@@ -196,6 +196,46 @@ RD = (1.2 − 0.6) / 0.3mA = 2kΩ
 
 Chosen: W = 4 µm
 
+## DC Sweep Analysis
+![CS Amplifier Circuit](02.png)
+
+To analyze the DC transfer characteristics of the Common Source (CS) amplifier by sweeping the input voltage and observing the variation in output voltage.
+
+### Theory
+
+DC Sweep analysis is used to study how the output of a circuit varies with respect to a DC input source. In a Common Source amplifier, the input voltage (Vgs) is swept over a specified range while the corresponding output voltage (Vout) is measured.
+
+For an NMOS operating in saturation region:
+
+Id = (1/2) kn (Vov)^2
+
+Where,
+Vov = Vgs - Vth  
+kn = μn Cox (W/L)
+
+As the gate-to-source voltage (Vgs) increases:
+
+• When Vgs < Vth → MOSFET is in Cut-off region → Id ≈ 0 → Vout ≈ VDD  
+• When Vgs > Vth → MOSFET enters Saturation region → Id increases  
+• Increase in Id causes larger voltage drop across drain resistor  
+• Therefore, Vout decreases
+
+This produces an inverse relationship between input and output, confirming that the Common Source amplifier provides voltage inversion.
+
+### Observation
+
+From the DC sweep graph:
+- Output voltage remains high at low input voltage.
+- As input voltage increases beyond threshold voltage, output voltage decreases.
+- The curve shows the transfer characteristics of the amplifier.
+
+### Inference
+
+The DC sweep confirms:
+- Proper biasing of the MOSFET
+- Operation in saturation region
+- Inverting behavior of the Common Source amplifier
+- Suitable operating (Q) point for amplification
 ---
 
 ##  Transient Analysis
