@@ -247,6 +247,8 @@ Vin(LP) = 890.36 mV
 Vin(HP) = 909.59 mV  
 Vin(pp) = 19.2 mV  
 
+![CS Amplifier Circuit](05.png)
+
 ### Output
 Vout(LP) = 559.23 mV  
 Vout(HP) = 601.64 mV  
